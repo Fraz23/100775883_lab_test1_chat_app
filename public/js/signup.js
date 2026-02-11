@@ -3,7 +3,10 @@ $("#signup-form").on("submit", async function (event) {
 
   const formData = Object.fromEntries(new FormData(this));
   const alertBox = $("#signup-alert");
+  const submitBtn = $("#signup-btn");
+  const originalText = submitBtn.text();
   alertBox.addClass("d-none");
+  submitBtn.prop("disabled", true).text("Creating...");
 
   try {
     const response = await fetch("/api/signup", {
@@ -30,5 +33,7 @@ $("#signup-form").on("submit", async function (event) {
       .removeClass("d-none alert-success")
       .addClass("alert alert-danger")
       .text(err.message);
+  } finally {
+    submitBtn.prop("disabled", false).text(originalText);
   }
 });

@@ -3,7 +3,10 @@ $("#login-form").on("submit", async function (event) {
 
   const formData = Object.fromEntries(new FormData(this));
   const alertBox = $("#login-alert");
+  const submitBtn = $("#login-btn");
+  const originalText = submitBtn.text();
   alertBox.addClass("d-none");
+  submitBtn.prop("disabled", true).text("Signing in...");
 
   try {
     const response = await fetch("/api/login", {
@@ -24,5 +27,7 @@ $("#login-form").on("submit", async function (event) {
       .removeClass("d-none alert-success")
       .addClass("alert alert-danger")
       .text(err.message);
+  } finally {
+    submitBtn.prop("disabled", false).text(originalText);
   }
 });
