@@ -1,0 +1,19 @@
+{
+  "name": "100775883_lab_test1_chat_app",
+  "version": "1.0.0",
+  "description": "COMP3133 Lab Test 1 chat app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.1",
+    "socket.io": "^4.7.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
