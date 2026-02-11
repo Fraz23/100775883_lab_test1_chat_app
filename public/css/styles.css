@@ -1,0 +1,39 @@
+body {
+  background: #f8f9fb;
+}
+
+.chat-card {
+  min-height: 70vh;
+}
+
+.chat-messages {
+  flex: 1;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 16px;
+  background: #fff;
+  overflow-y: auto;
+  max-height: 55vh;
+}
+
+.chat-message {
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  background: #f1f3f5;
+}
+
+.chat-message.me {
+  background: #d1e7dd;
+}
+
+.chat-meta {
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.system-message {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-bottom: 6px;
+}
