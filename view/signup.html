@@ -12,6 +12,10 @@
   </head>
   <body class="bg-light">
     <div class="container py-5">
+      <div class="auth-header">
+        <div class="auth-title">Create Your Chat Profile</div>
+        <div class="auth-subtitle">Pick a unique username and join the rooms.</div>
+      </div>
       <div class="row justify-content-center">
         <div class="col-lg-6">
           <div class="card shadow-sm">
@@ -21,6 +25,7 @@
                 <div class="mb-3">
                   <label class="form-label">Username</label>
                   <input class="form-control" name="username" required />
+                  <div class="form-text">Must be unique and memorable.</div>
                 </div>
                 <div class="mb-3">
                   <label class="form-label">First Name</label>
@@ -33,9 +38,10 @@
                 <div class="mb-3">
                   <label class="form-label">Password</label>
                   <input class="form-control" name="password" type="password" required />
+                  <div class="form-text">At least 6 characters is a good idea.</div>
                 </div>
                 <div class="d-grid">
-                  <button class="btn btn-primary" type="submit">Sign Up</button>
+                  <button id="signup-btn" class="btn btn-primary" type="submit">Sign Up</button>
                 </div>
               </form>
               <div id="signup-alert" class="alert mt-3 d-none"></div>

@@ -12,6 +12,10 @@
   </head>
   <body class="bg-light">
     <div class="container py-5">
+      <div class="auth-header">
+        <div class="auth-title">Welcome Back</div>
+        <div class="auth-subtitle">Log in to continue your conversations.</div>
+      </div>
       <div class="row justify-content-center">
         <div class="col-lg-5">
           <div class="card shadow-sm">
@@ -21,13 +25,14 @@
                 <div class="mb-3">
                   <label class="form-label">Username</label>
                   <input class="form-control" name="username" required />
+                  <div class="form-text">Use the username you signed up with.</div>
                 </div>
                 <div class="mb-3">
                   <label class="form-label">Password</label>
                   <input class="form-control" name="password" type="password" required />
                 </div>
                 <div class="d-grid">
-                  <button class="btn btn-primary" type="submit">Login</button>
+                  <button id="login-btn" class="btn btn-primary" type="submit">Login</button>
                 </div>
               </form>
               <div id="login-alert" class="alert mt-3 d-none"></div>
